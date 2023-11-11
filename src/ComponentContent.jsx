@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import { ErrorBoundary } from "react-error-boundary";
+import { displayError } from 'common/functions';
 
 function ComponentContent({ vars }) {
     return (
