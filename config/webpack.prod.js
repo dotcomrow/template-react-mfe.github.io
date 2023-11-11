@@ -30,13 +30,14 @@ const prodConfig = {
             },
         },
         new ModuleFederationPlugin({
-            name: 'map_component',
+            name: 'component',
             filename: 'remoteEntry.js',
             exposes: {
                 './ComponentContent': './src/ComponentContent.jsx'
             },
             remotes: {
                 dtk: 'storybook@https://dtk.suncoast.systems/dtk/remoteEntry.js',
+                common: 'common@https://commonjs.suncoast.systems/remoteEntry.js',
             },
             shared: {
                 ...packageJson.dependencies,
